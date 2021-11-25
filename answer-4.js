@@ -1,7 +1,11 @@
 const handlers = {};
 
+/**
+ * As an arbitrary arguments we don't know how many argument to expect,
+ * hence i am using rest operator to pack it into an array and use apply with it.
+*/
 const trigger = (type, ...arguments) => {
-  // iterate through the list to invoke each event with an arguments.
+    
   handlers[type].forEach((handler) => handler.apply(null, arguments));
 };
 
@@ -36,7 +40,7 @@ trigger('foo', "hello", 'chisom');
  * Result Explanation:
  *
  * when trigger with our arguments, we then invoke our handler using apply method 
- * which allows us to call a function with a given this value and arguments.
+ * which allows us to call a function with a given this value and arguments provided as an array.
  * 
  * hence our console will log "here are my args hello chisom". 
  */
