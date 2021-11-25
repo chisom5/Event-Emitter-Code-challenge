@@ -46,6 +46,6 @@ trigger("foo");
 /**
  * Result:
  *
- * when trigger it will have no output because our event
+ * when trigger we will have no output in our console because our event handler 
  * has been removed
  */

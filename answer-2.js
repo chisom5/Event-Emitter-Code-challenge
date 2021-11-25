@@ -35,9 +35,10 @@ trigger("foo");
 /**
  * Result:
  *
- * when the trigger method is called, the two handlers will be called
+ * when the trigger method is called, our two event handlers are registered and
+ * invoke 
  * that's why we will have:
  *
  * "Do foo" and
- * "Do some other foo"
+ * "Do some other foo" values in our console.
  */
